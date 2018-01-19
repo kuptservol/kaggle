@@ -52,8 +52,6 @@ def VGG16():
     FCBlock(model)
     FCBlock(model)
     model.add(Dense(1000, activation='softmax'))
-    fpath = get_file('vgg16.h5', 'data/vgg16.h5', cache_subdir='models')
-    model.load_weights(fpath)
 
     return model
 
